@@ -39,7 +39,7 @@ private fun Project.compileClasspathOf(compilation: KotlinCompilation): FileColl
     if (compilation.target.isAndroidTarget()) {
         // This is a workaround for https://youtrack.jetbrains.com/issue/KT-33893
         @Suppress("DEPRECATION") // for compatibility
-        return compilation.compileKotlinTask.cast<KotlinCompile>().classpath
+        return compilation.compileKotlinTask.cast<KotlinCompile>().libraries
     }
 
     val platformDependencyFiles: FileCollection = (compilation as? AbstractKotlinNativeCompilation)
@@ -49,5 +49,5 @@ private fun Project.compileClasspathOf(compilation: KotlinCompilation): FileColl
 
     return compilation.compileDependencyFiles + platformDependencyFiles +
             @Suppress("DEPRECATION") // for compatibility
-            (compilation.compileKotlinTask.run { this as? KotlinCompile }?.classpath ?: files())
+            (compilation.compileKotlinTask.run { this as? KotlinCompile }?.libraries ?: files())
 }

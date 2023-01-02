@@ -12,7 +12,7 @@ kotlin {
     jvm()
     linuxX64("linux")
     macosX64("macos")
-    js()
+    js(BOTH)
     sourceSets {
         val commonMain by sourceSets.getting
         val linuxMain by sourceSets.getting

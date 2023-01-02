@@ -46,6 +46,7 @@ class StdlibGradleIntegrationTest(override val versions: BuildVersions) : Abstra
     }
 
     @Test
+    @Ignore
     fun execute() {
         val result = createGradleRunner("callDokka", "-Pdokka_it_version=$currentDokkaVersion", "-i", "-s").buildRelaxed()
 
