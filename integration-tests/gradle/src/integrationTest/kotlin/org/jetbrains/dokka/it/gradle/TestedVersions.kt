@@ -7,7 +7,7 @@ internal object TestedVersions {
     /**
      * All supported Gradle/Kotlin versions, including [LATEST]
      *
-     * Kotlin/Gradle compatibility matrix: https://docs.gradle.org/current/userguide/compatibility.html#kotlin
+     * [Kotlin/Gradle compatibility matrix](https://docs.gradle.org/current/userguide/compatibility.html#kotlin)
      */
     val ALL_SUPPORTED =
         BuildVersions.permutations(
@@ -24,7 +24,7 @@ internal object TestedVersions {
      * Starting with version 7, major Android Gradle Plugin versions are aligned
      * with major Gradle versions, i.e AGP 7.X will only work with Gradle 7.X
      *
-     * AGP/Gradle compatibility matrix: https://developer.android.com/studio/releases/gradle-plugin#updating-gradle
+     * [AGP/Gradle compatibility matrix](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle)
      */
     val ANDROID =
         BuildVersions.permutations(
